@@ -13,7 +13,10 @@
 <body>
   <div class="app">
 
+    <!-- Top Header with Eclipse Background -->
     <header class="header">
+      <div class="header-bg"></div>
+      <div class="header-overlay"></div>
       <div class="header-inner">
         <div class="logo">
           <div class="logo-icon">📖</div>
@@ -30,11 +33,17 @@
       </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Section -->
     <section class="hero" id="hero">
-      <div class="hero-flag"></div>
-      <div class="hero-eclipse"></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2 class="hero-title animate-on-scroll" data-i18n="heroTitle">Find Authentic Hawala Instantly</h2>
+        <p class="hero-subtitle animate-on-scroll" data-i18n="heroSubtitle">Quran • Hadith • Ahmadiyya Literature</p>
+
+        <div class="search-box animate-on-scroll">
+          <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Ask any Islamic or Tabligh related question..." autocomplete="off">
+          <button id="searchBtn" class="search-btn" data-i18n="searchBtn">Search</button>
+        </div>
+      </div>
 
       <!-- Portraits -->
       <div class="portraits">
@@ -45,16 +54,6 @@
         <div class="portrait animate-on-scroll">
           <img src="images/khalifa.jpg" alt="Hazrat Khalifatul Masih V (aba)">
           <span>Hazrat Mirza Masroor Ahmad (aba)</span>
-        </div>
-      </div>
-
-      <div class="hero-content">
-        <h2 class="hero-title animate-on-scroll" data-i18n="heroTitle">Find Authentic Hawala Instantly</h2>
-        <p class="hero-subtitle animate-on-scroll" data-i18n="heroSubtitle">Quran • Hadith • Ahmadiyya Literature</p>
-
-        <div class="search-box animate-on-scroll">
-          <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Ask any Islamic or Tabligh related question..." autocomplete="off">
-          <button id="searchBtn" class="search-btn" data-i18n="searchBtn">Search</button>
         </div>
       </div>
     </section>
