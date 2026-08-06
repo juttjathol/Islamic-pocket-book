@@ -1,4 +1,4 @@
-/* ===== Islamic Pocket Book - Full Professional Version ===== */
+/* ===== Islamic Pocket Book ===== */
 
 const translations = {
   en: {
@@ -47,21 +47,19 @@ let currentTheme = localStorage.getItem('ipb-theme') || 'light';
 const PDF_URL = "https://drive.google.com/file/d/1PohF361-ZYMVGKeQYGUpI_tbaPNpOU88/view?usp=drive_link";
 
 const pocketBookIndex = [
-  { title: "وجود باری تعالیٰ کے دلائل / Proofs of Existence of God", page: 1, keywords: ["god", "existence", "وجود", "خدا", "باری", "proof"] },
-  { title: "دہریوں کے اعتراضات / Atheists' Objections", page: 20, keywords: ["atheist", "دهری", "منکرین"] },
-  { title: "عیسائیت / Christianity", page: 71, keywords: ["christianity", "عیسائیت", "عیسائی", "jesus"] },
-  { title: "تردید الوہیت مسیح / Refutation of Divinity of Jesus", page: 74, keywords: ["divinity", "الوہیت", "trinity", "تثلیث"] },
-  { title: "مسیح صلیب پر فوت نہیں ہوئے / Jesus did not die on Cross", page: 83, keywords: ["cross", "صلیب", "صلب", "crucifixion"] },
-  { title: "کفارہ کی تردید / Refutation of Atonement", page: 92, keywords: ["atonement", "کفارہ"] },
-  { title: "ابطال تثلیث / Refutation of Trinity", page: 100, keywords: ["trinity", "تثلیث"] },
+  { title: "وجود باری تعالیٰ کے دلائل / Proofs of Existence of God", page: 1, keywords: ["god", "existence", "وجود", "خدا", "باری", "proof", "wujood"] },
+  { title: "عیسائیت / Christianity", page: 71, keywords: ["christianity", "عیسائیت", "عیسائی", "jesus", "eesai"] },
+  { title: "تردید الوہیت مسیح / Refutation of Divinity of Jesus", page: 74, keywords: ["divinity", "الوہیت", "trinity", "تثلیث", "uloohiyat"] },
+  { title: "مسیح صلیب پر فوت نہیں ہوئے / Jesus did not die on Cross", page: 83, keywords: ["cross", "صلیب", "صلب", "crucifixion", "saleeb"] },
+  { title: "کفارہ کی تردید / Refutation of Atonement", page: 92, keywords: ["atonement", "کفارہ", "kuffara"] },
+  { title: "ابطال تثلیث / Refutation of Trinity", page: 100, keywords: ["trinity", "تثلیث", "taslees"] },
   { title: "تحریف بائبل / Corruption of the Bible", page: 101, keywords: ["bible", "بائبل", "تحریف", "tahrif"] },
-  { title: "صداقت مسیح موعود از بائبل / Promised Messiah from Bible", page: 111, keywords: ["promised messiah", "مسیح موعود", "bible"] },
-  { title: "وفات مسیح ناصری / Death of Jesus", page: 233, keywords: ["death of jesus", "وفات مسیح", "توفی", "رفع", "ascension", "tawaffa"] },
-  { title: "مسئلہ امکان نبوت / Possibility of Prophethood", page: 317, keywords: ["prophethood", "نبوت", "امکان نبوت"] },
-  { title: "تردید انقطاع نبوت / Khatam an-Nabiyyin (Finality)", page: 357, keywords: ["khatam", "خاتم", "خاتم النبیین", "finality", "seal of prophets", "ختم نبوت"] },
-  { title: "صداقت حضرت مسیح موعود / Truth of Promised Messiah", page: 420, keywords: ["promised messiah", "مسیح موعود", "صداقت", "mirza ghulam ahmad"] },
-  { title: "الہامات پر اعتراضات / Objections on Revelations", page: 490, keywords: ["revelation", "الہام", "ilham"] },
-  { title: "پیشگوئیوں پر اعتراضات / Objections on Prophecies", page: 561, keywords: ["prophecy", "پیشگوئی", "eclipse", "کسوف", "خسوف", "solar", "lunar"] },
+  { title: "صداقت مسیح موعود از بائبل / Promised Messiah from Bible", page: 111, keywords: ["promised messiah", "مسیح موعود", "bible", "masih mauood"] },
+  { title: "وفات مسیح ناصری / Death of Jesus", page: 233, keywords: ["death of jesus", "وفات مسیح", "توفی", "رفع", "ascension", "tawaffa", "wafat e masih", "wafat masih"] },
+  { title: "مسئلہ امکان نبوت / Possibility of Prophethood", page: 317, keywords: ["prophethood", "نبوت", "امکان نبوت", "imkan e nabuwwat"] },
+  { title: "تردید انقطاع نبوت / Khatam an-Nabiyyin (Finality)", page: 357, keywords: ["khatam", "خاتم", "خاتم النبیین", "finality", "seal of prophets", "ختم نبوت", "khatam e nabuwwat", "khatame nabuwwat", "khatamun nabiyyin"] },
+  { title: "صداقت حضرت مسیح موعود / Truth of Promised Messiah", page: 420, keywords: ["promised messiah", "مسیح موعود", "صداقت", "mirza ghulam ahmad", "masih mauood"] },
+  { title: "پیشگوئیوں پر اعتراضات / Objections on Prophecies", page: 561, keywords: ["prophecy", "پیشگوئی", "eclipse", "کسوف", "خسوف", "solar", "lunar", "sun and moon", "gerhan", "sooraj chand"] },
   { title: "جہاد کی حقیقت / Reality of Jihad", page: 600, keywords: ["jihad", "جہاد"] },
   { title: "خلافت احمدیہ / Ahmadiyya Khilafat", page: 650, keywords: ["khilafat", "خلافت", "caliphate", "khalifa"] }
 ];
@@ -71,28 +69,27 @@ const popularTopics = {
   ur: ["وفات مسیح", "خاتم النبیین", "مسیح موعود", "تثلیث", "کفارہ", "سورج اور چاند کا گرہن", "وجود باری تعالیٰ", "تحریف بائبل", "جہاد", "خلافت"]
 };
 
-// General knowledge base for common Islamic topics
 const generalKnowledge = [
   {
-    keywords: ["eclipse", "solar", "lunar", "sun and moon", "کسوف", "خسوف", "گرہن", "sun and moon eclipse"],
+    keywords: ["eclipse", "solar", "lunar", "sun and moon", "کسوف", "خسوف", "گرہن", "gerhan", "sooraj", "chand"],
     title: "The Great Prophecy of the Solar and Lunar Eclipses",
-    snippet: "In 1894, a unique combination of lunar and solar eclipses occurred in the month of Ramadan, fulfilling a prophecy of the Promised Messiah (as) as a sign of his truth.",
+    snippet: "In 1894, a unique combination of lunar and solar eclipses occurred in the month of Ramadan, fulfilling a prophecy of the Promised Messiah (as) as a heavenly sign.",
     link: "https://www.alislam.org/articles/promised-messiah-lunar-solar-eclipses/"
   },
   {
-    keywords: ["khatam", "خاتم", "finality", "seal of prophets", "ختم نبوت"],
+    keywords: ["khatam", "خاتم", "finality", "seal", "ختم نبوت", "khatam e nabuwwat", "khatame nabuwwat"],
     title: "Khatam an-Nabiyyin – Seal of the Prophets",
     snippet: "The Holy Quran (33:40) declares the Holy Prophet Muhammad (sa) as the Seal of the Prophets. Ahmadiyya understanding explains the meaning of finality in light of continuous spiritual blessings.",
     link: "https://www.alislam.org/library/books/Seal-of-Prophets.pdf"
   },
   {
-    keywords: ["death of jesus", "وفات مسیح", "jesus died", "tawaffa"],
+    keywords: ["death of jesus", "وفات مسیح", "wafat e masih", "wafat masih", "tawaffa"],
     title: "Death of Jesus (as) – Natural Death",
     snippet: "According to the Holy Quran and Ahmadiyya belief, Jesus (as) died a natural death. The word 'tawaffa' is used for natural death in multiple places in the Quran.",
     link: "https://www.alislam.org/library/books/Jesus-in-India.pdf"
   },
   {
-    keywords: ["promised messiah", "مسیح موعود", "mirza ghulam ahmad"],
+    keywords: ["promised messiah", "مسیح موعود", "masih mauood", "mirza ghulam ahmad"],
     title: "The Promised Messiah and Mahdi",
     snippet: "Hazrat Mirza Ghulam Ahmad of Qadian (as) claimed to be the Promised Messiah and Mahdi whose advent was foretold by the Holy Prophet Muhammad (sa).",
     link: "https://www.alislam.org/messiah/"
@@ -104,7 +101,7 @@ const generalKnowledge = [
     link: "https://www.alislam.org/jihad/"
   },
   {
-    keywords: ["trinity", "تثلیث"],
+    keywords: ["trinity", "تثلیث", "taslees"],
     title: "Refutation of the Trinity",
     snippet: "The concept of Trinity is against pure monotheism (Tawhid) taught by all prophets including Jesus (as) himself.",
     link: "https://www.alislam.org/library/books/Christianity-A-Journey-from-Facts-to-Fiction.pdf"
@@ -112,7 +109,12 @@ const generalKnowledge = [
 ];
 
 function normalizeQuery(q) {
-  return q.toLowerCase().replace(/[^\w\u0600-\u06FF\s]/g, ' ').replace(/\s+/g, ' ').trim();
+  return q.toLowerCase()
+    .replace(/[àáâãäå]/g, 'a').replace(/[èéêë]/g, 'e')
+    .replace(/[ìíîï]/g, 'i').replace(/[òóôõö]/g, 'o')
+    .replace(/[ùúûü]/g, 'u')
+    .replace(/[^\w\u0600-\u06FF\s]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
 }
 
 function fuzzyMatch(text, query) {
@@ -169,7 +171,7 @@ function showGeneralResults(query) {
   list.innerHTML = '';
 
   const matches = generalKnowledge.filter(item =>
-    item.keywords.some(k => q.includes(k) || normalizeQuery(k).includes(q))
+    item.keywords.some(k => q.includes(normalizeQuery(k)) || normalizeQuery(k).includes(q))
   );
 
   if (matches.length === 0) {
@@ -200,8 +202,10 @@ async function searchQuran(query) {
   try {
     let searchTerm = query;
     const nq = normalizeQuery(query);
-    if (nq.includes('eclipse') || nq.includes('کسوف') || nq.includes('خسوف') || nq.includes('گرہن')) {
+    if (nq.includes('eclipse') || nq.includes('کسوف') || nq.includes('خسوف') || nq.includes('gerhan')) {
       searchTerm = "eclipse";
+    } else if (nq.includes('khatam') || nq.includes('خاتم')) {
+      searchTerm = "seal of the prophets";
     }
 
     const res = await fetch(`https://api.alquran.cloud/v1/search/${encodeURIComponent(searchTerm)}/all/en`);
@@ -258,13 +262,13 @@ function getQuranFallbacks(q) {
       { ref: "Al-Maidah 5:3", text: "...This day I have perfected for you your religion and completed My favor upon you..." }
     ];
   }
-  if (q.includes('jesus') || q.includes('عیسی') || q.includes('مسیح') || q.includes('death') || q.includes('وفات')) {
+  if (q.includes('jesus') || q.includes('عیسی') || q.includes('مسیح') || q.includes('death') || q.includes('وفات') || q.includes('wafat')) {
     return [
       { ref: "Al-Imran 3:55", text: "O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve..." },
       { ref: "An-Nisa 4:157-158", text: "...they did not kill him, nor did they crucify him; but it was made to appear so to them... Rather, Allah raised him to Himself." }
     ];
   }
-  if (q.includes('eclipse') || q.includes('کسوف') || q.includes('خسوف')) {
+  if (q.includes('eclipse') || q.includes('کسوف') || q.includes('خسوف') || q.includes('gerhan')) {
     return [
       { ref: "Al-Qiyamah 75:8-9", text: "And the moon is eclipsed, And the sun and the moon are brought together..." }
     ];
@@ -282,19 +286,19 @@ async function searchHadith(query) {
   const q = normalizeQuery(query);
   const hadithDatabase = [
     {
-      keywords: ["khatam", "خاتم", "finality", "seal", "ختم نبوت"],
+      keywords: ["khatam", "خاتم", "finality", "seal", "ختم نبوت", "khatam e nabuwwat"],
       ref: "Sahih Muslim / Bukhari",
       text: "I am the last of the Prophets, there is no Prophet after me. (Ana Khatamun-Nabiyyin)",
       link: "https://sunnah.com/search?q=khatam+nabiyyin"
     },
     {
-      keywords: ["jesus", "عیسی", "مسیح", "descent", "نزول", "وفات"],
+      keywords: ["jesus", "عیسی", "مسیح", "descent", "نزول", "وفات", "wafat"],
       ref: "Sahih Bukhari & Muslim",
       text: "By Him in Whose Hands my soul is, the son of Mary (Jesus) will shortly descend amongst you as a just ruler...",
       link: "https://sunnah.com/search?q=jesus+son+of+mary+descend"
     },
     {
-      keywords: ["eclipse", "کسوف", "خسوف", "solar", "lunar"],
+      keywords: ["eclipse", "کسوف", "خسوف", "solar", "lunar", "gerhan"],
       ref: "Sahih Bukhari",
       text: "The sun and the moon do not eclipse because of the death or life of someone, but they are two signs amongst the signs of Allah.",
       link: "https://sunnah.com/search?q=eclipse+sun+moon"
@@ -313,7 +317,7 @@ async function searchHadith(query) {
     }
   ];
 
-  const found = hadithDatabase.filter(h => h.keywords.some(k => q.includes(k) || normalizeQuery(k).includes(q)));
+  const found = hadithDatabase.filter(h => h.keywords.some(k => q.includes(normalizeQuery(k)) || normalizeQuery(k).includes(q)));
   loadingEl.style.display = 'none';
 
   if (found.length > 0) {
@@ -383,7 +387,7 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 }
 
@@ -395,6 +399,11 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   renderTopics();
   initScrollAnimations();
+
+  // Force animation on load for hero elements
+  setTimeout(() => {
+    document.querySelectorAll('.hero .animate-on-scroll').forEach(el => el.classList.add('visible'));
+  }, 100);
 
   document.getElementById('langToggle').addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'ur' : 'en';
@@ -423,6 +432,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) heroBg.style.transform = `scale(1.1) translateY(${scrolled * 0.2}px)`;
+    if (heroBg) {
+      heroBg.style.transform = `scale(1.12) translateY(${scrolled * 0.22}px)`;
+    }
   });
 });

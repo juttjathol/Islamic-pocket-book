@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Islamic Pocket Book - Professional Hawala & Reference Finder for Ahmadiyya preachers">
+  <meta name="description" content="Islamic Pocket Book - Professional Hawala & Reference Finder">
   <title>Islamic Pocket Book</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,6 @@
 <body>
   <div class="app">
 
-    <!-- Header -->
     <header class="header">
       <div class="header-inner">
         <div class="logo">
@@ -31,19 +30,20 @@
       </div>
     </header>
 
-    <!-- Hero with Eclipse Background + Portraits -->
+    <!-- Hero -->
     <section class="hero" id="hero">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
 
-      <!-- Subtle portraits -->
-      <div class="portrait left-portrait animate-on-scroll">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Mirza_Ghulam_Ahmad.jpg/300px-Mirza_Ghulam_Ahmad.jpg" alt="Promised Messiah" loading="lazy">
-        <span class="portrait-label">Hazrat Mirza Ghulam Ahmad (as)</span>
-      </div>
-      <div class="portrait right-portrait animate-on-scroll">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mirza_Masroor_Ahmad.jpg/300px-Mirza_Masroor_Ahmad.jpg" alt="Khalifatul Masih V" loading="lazy" onerror="this.style.display='none'">
-        <span class="portrait-label">Hazrat Mirza Masroor Ahmad (aba)</span>
+      <div class="portraits">
+        <div class="portrait animate-on-scroll">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Mirza_Ghulam_Ahmad.jpg" alt="Promised Messiah" loading="lazy">
+          <span>Hazrat Mirza Ghulam Ahmad (as)</span>
+        </div>
+        <div class="portrait animate-on-scroll">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mirza_Masroor_Ahmad_2013.jpg/300px-Mirza_Masroor_Ahmad_2013.jpg" alt="Khalifatul Masih V" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <span>Hazrat Mirza Masroor Ahmad (aba)</span>
+        </div>
       </div>
 
       <div class="hero-content">
@@ -57,19 +57,19 @@
       </div>
     </section>
 
-    <!-- General Results (like search engine) -->
+    <!-- General Results -->
     <section class="general-results" id="generalResults" style="display:none;">
       <h3 class="section-title">General Results</h3>
       <div id="generalResultsList"></div>
     </section>
 
-    <!-- Suggested Topics -->
+    <!-- Topics -->
     <section class="suggestions animate-on-scroll" id="suggestionsSection">
       <h3 data-i18n="suggestedTitle">Popular Tabligh Topics</h3>
       <div class="topic-grid" id="topicGrid"></div>
     </section>
 
-    <!-- Detailed Results -->
+    <!-- Results -->
     <section class="results" id="resultsSection" style="display: none;">
       <div class="results-header">
         <h3 data-i18n="resultsTitle">Search Results</h3>
