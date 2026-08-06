@@ -31,10 +31,21 @@
       </div>
     </header>
 
-    <!-- Hero with visible flag background -->
+    <!-- Hero with Eclipse Background + Portraits -->
     <section class="hero" id="hero">
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
+
+      <!-- Subtle portraits -->
+      <div class="portrait left-portrait animate-on-scroll">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Mirza_Ghulam_Ahmad.jpg/300px-Mirza_Ghulam_Ahmad.jpg" alt="Promised Messiah" loading="lazy">
+        <span class="portrait-label">Hazrat Mirza Ghulam Ahmad (as)</span>
+      </div>
+      <div class="portrait right-portrait animate-on-scroll">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mirza_Masroor_Ahmad.jpg/300px-Mirza_Masroor_Ahmad.jpg" alt="Khalifatul Masih V" loading="lazy" onerror="this.style.display='none'">
+        <span class="portrait-label">Hazrat Mirza Masroor Ahmad (aba)</span>
+      </div>
+
       <div class="hero-content">
         <h2 class="hero-title animate-on-scroll" data-i18n="heroTitle">Find Authentic Hawala Instantly</h2>
         <p class="hero-subtitle animate-on-scroll" data-i18n="heroSubtitle">Quran • Hadith • Ahmadiyya Literature</p>
@@ -46,13 +57,19 @@
       </div>
     </section>
 
+    <!-- General Results (like search engine) -->
+    <section class="general-results" id="generalResults" style="display:none;">
+      <h3 class="section-title">General Results</h3>
+      <div id="generalResultsList"></div>
+    </section>
+
     <!-- Suggested Topics -->
     <section class="suggestions animate-on-scroll" id="suggestionsSection">
       <h3 data-i18n="suggestedTitle">Popular Tabligh Topics</h3>
       <div class="topic-grid" id="topicGrid"></div>
     </section>
 
-    <!-- Results -->
+    <!-- Detailed Results -->
     <section class="results" id="resultsSection" style="display: none;">
       <div class="results-header">
         <h3 data-i18n="resultsTitle">Search Results</h3>
@@ -60,7 +77,6 @@
       </div>
 
       <div class="results-grid">
-        <!-- Quran -->
         <div class="result-card" id="quranCard">
           <div class="card-header" onclick="toggleSection('quran')">
             <h4><span class="section-icon">🕌</span> <span data-i18n="quranSection">Quran Verses</span> <span class="count" id="quranCount">0</span></h4>
@@ -72,7 +88,6 @@
           </div>
         </div>
 
-        <!-- Hadith -->
         <div class="result-card" id="hadithCard">
           <div class="card-header" onclick="toggleSection('hadith')">
             <h4><span class="section-icon">📜</span> <span data-i18n="hadithSection">Hadith Results</span> <span class="count" id="hadithCount">0</span></h4>
@@ -84,7 +99,6 @@
           </div>
         </div>
 
-        <!-- Ahmadiyya -->
         <div class="result-card" id="ahmadiyyaCard">
           <div class="card-header" onclick="toggleSection('ahmadiyya')">
             <h4><span class="section-icon">📚</span> <span data-i18n="ahmadiyyaSection">Ahmadiyya Literature</span> <span class="count" id="ahmadiyyaCount">0</span></h4>
