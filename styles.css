@@ -39,7 +39,7 @@ body {
 
 .app { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
 
-/* ========== HEADER with Eclipse Background ========== */
+/* ========== TOP HEADER - Ahmadiyya Flag ========== */
 .header {
   position: sticky;
   top: 0;
@@ -51,17 +51,16 @@ body {
 .header-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/eclipse.jpg');
+  background-image: url('images/ahmadiyya-flag.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.55;
-  filter: brightness(0.7);
+  opacity: 0.55; /* higher visibility */
 }
 
 .header-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10,25,35,0.75) 0%, rgba(10,25,35,0.55) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 100%);
 }
 
 .header-inner {
@@ -82,23 +81,23 @@ body {
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   font-size: 1.3rem; color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 .logo h1 {
   font-size: 1.15rem;
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 .logo-sub {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
 }
 
 .header-controls { display: flex; gap: 8px; }
 .control-btn, .pdf-btn-header {
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
   color: #ffffff;
   padding: 8px 14px;
   border-radius: 10px;
@@ -110,21 +109,53 @@ body {
   transition: all var(--transition);
 }
 .control-btn:hover, .pdf-btn-header:hover {
-  background: rgba(255,255,255,0.25);
-  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.28);
+  border-color: rgba(255,255,255,0.55);
 }
 
-/* ========== HERO ========== */
+/* ========== HERO - Eclipse Background ========== */
 .hero {
   position: relative;
-  padding: 60px 0 50px;
+  padding: 70px 0 50px;
   text-align: center;
-  margin-bottom: 30px;
-  min-height: 340px;
+  overflow: hidden;
+  border-radius: 0 0 28px 28px;
+  margin: 0 -20px 30px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/eclipse.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  transform: scale(1.05);
+  transition: transform 0.6s ease;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 20, 30, 0.55) 0%,
+    rgba(10, 20, 30, 0.35) 45%,
+    rgba(247, 246, 242, 0.92) 100%
+  );
+}
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 10, 18, 0.65) 0%,
+    rgba(5, 10, 18, 0.45) 45%,
+    rgba(14, 16, 20, 0.95) 100%
+  );
 }
 
 .hero-content {
@@ -139,10 +170,11 @@ body {
   font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 10px;
-  color: var(--text);
+  color: #ffffff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.45);
 }
 .hero-subtitle {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.88);
   font-size: 1.1rem;
   margin-bottom: 30px;
 }
@@ -150,17 +182,20 @@ body {
 .search-box {
   display: flex;
   gap: 10px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 18px;
   padding: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 10px 36px rgba(0,0,0,0.25);
   transition: all var(--transition);
 }
+[data-theme="dark"] .search-box {
+  background: rgba(24,27,34,0.95);
+  border-color: rgba(255,255,255,0.12);
+}
 .search-box:focus-within {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 44px rgba(0,0,0,0.3);
 }
 #searchInput {
   flex: 1;
@@ -182,20 +217,22 @@ body {
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  box-shadow: 0 4px 14px rgba(13,115,119,0.35);
+  box-shadow: 0 4px 14px rgba(13,115,119,0.4);
   transition: all var(--transition);
 }
 .search-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(13,115,119,0.45);
+  box-shadow: 0 6px 20px rgba(13,115,119,0.5);
 }
 
 /* Portraits */
 .portraits {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-top: 40px;
+  gap: 70px;
+  margin-top: 45px;
+  position: relative;
+  z-index: 2;
   flex-wrap: wrap;
 }
 .portrait {
@@ -206,17 +243,24 @@ body {
   height: 120px;
   object-fit: cover;
   border-radius: 14px;
-  border: 3px solid var(--border);
-  box-shadow: var(--shadow);
+  border: 3px solid rgba(255,255,255,0.9);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
   background: #ddd;
 }
 .portrait span {
   display: block;
   margin-top: 8px;
   font-size: 0.75rem;
-  color: var(--text-secondary);
-  max-width: 130px;
+  background: rgba(255,255,255,0.9);
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #1a1a1a;
+  max-width: 140px;
   line-height: 1.3;
+}
+[data-theme="dark"] .portrait span {
+  background: rgba(0,0,0,0.75);
+  color: #f0eeeb;
 }
 
 /* General Results */
@@ -395,5 +439,5 @@ body {
   .search-btn { width: 100%; }
   .topic-grid { grid-template-columns: 1fr 1fr; }
   .portraits { gap: 30px; }
-  .portrait img { width: 80px; height: 100px; }
+  .portrait img { width: 85px; height: 105px; }
 }
