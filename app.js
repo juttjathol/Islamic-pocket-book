@@ -400,10 +400,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderTopics();
   initScrollAnimations();
 
-  // Force animation on load for hero elements
+  // Force animation on load
   setTimeout(() => {
     document.querySelectorAll('.hero .animate-on-scroll').forEach(el => el.classList.add('visible'));
-  }, 100);
+  }, 80);
 
   document.getElementById('langToggle').addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'ur' : 'en';
@@ -427,13 +427,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('generalResults').style.display = 'none';
     document.getElementById('suggestionsSection').style.display = 'block';
     document.getElementById('searchInput').value = '';
-  });
-
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroBg = document.querySelector('.hero-bg');
-    if (heroBg) {
-      heroBg.style.transform = `scale(1.12) translateY(${scrolled * 0.22}px)`;
-    }
   });
 });
