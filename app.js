@@ -276,7 +276,7 @@ async function searchHadith(query) {
       item.innerHTML = `
         <div class="result-ref">${h.ref}</div>
         <div class="result-text">${h.text}</div>
-        <div class="result-meta">See full collection at sunnah.com</div>
+        <div class="result-meta"><a href="https://sunnah.com" target="_blank" style="color:var(--accent);">See full collection at sunnah.com</a></div>
       `;
       resultsEl.appendChild(item);
     });
