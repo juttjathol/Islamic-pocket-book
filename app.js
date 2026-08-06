@@ -7,37 +7,37 @@ const translations = {
     heroSubtitle: "Search Quran, Hadith and Ahmadiyya literature for Tabligh",
     searchPlaceholder: "Ask any Islamic or Tabligh related question...",
     searchBtn: "Search",
-    downloadPdf: "📥 PDF",
+    downloadPdf: "\uD83D\uDCE5 PDF",
     suggestedTitle: "Popular Tabligh Topics",
     resultsTitle: "Search Results",
     clearResults: "Clear",
     quranSection: "Quran Verses",
     hadithSection: "Hadith Results",
     ahmadiyyaSection: "Ahmadiyya Literature",
-    footerText: "Islamic Pocket Book — Made by Masroor Amjad",
+    footerText: "Islamic Pocket Book \u2014 Made for Ahmadiyya preachers",
     noResults: "No matching results found.",
     loading: "Loading...",
     page: "Page",
-    viewInPdf: "Open in Pocket Book →"
+    viewInPdf: "Open in Pocket Book \u2192"
   },
   ur: {
-    siteTitle: "اسلامک پاکٹ بک",
-    heroTitle: "فوراً حوالہ جات تلاش کریں",
-    heroSubtitle: "قرآن، حدیث اور احمدی ادب میں تبلیغ کے لیے تلاش کریں",
-    searchPlaceholder: "کوئی بھی اسلامی یا تبلیغی سوال پوچھیں...",
-    searchBtn: "تلاش کریں",
-    downloadPdf: "📥 PDF",
-    suggestedTitle: "مقبول تبلیغی موضوعات",
-    resultsTitle: "تلاش کے نتائج",
-    clearResults: "صاف کریں",
-    quranSection: "قرآن کی آیات",
-    hadithSection: "احادیث کے نتائج",
-    ahmadiyyaSection: "احمدی ادب",
-    footerText: "اسلامک پاکٹ بک — احمدی مبلغین کے لیے",
-    noResults: "کوئی مماثل نتیجہ نہیں ملا۔",
-    loading: "لوڈ ہو رہا ہے...",
-    page: "صفحہ",
-    viewInPdf: "پاکٹ بک میں کھولیں ←"
+    siteTitle: "\u0627\u0633\u0644\u0627\u0645\u06A9 \u067E\u0627\u06A9\u0679 \u0628\u06A9",
+    heroTitle: "\u0641\u0648\u0631\u0627\u064B \u062D\u0648\u0627\u0644\u06C1 \u062C\u0627\u062A \u062A\u0644\u0627\u0634 \u06A9\u0631\u06CC\u06BA",
+    heroSubtitle: "\u0642\u0631\u0622\u0646\u060C \u062D\u062F\u06CC\u062B \u0627\u0648\u0631 \u0627\u062D\u0645\u062F\u06CC \u0627\u062F\u0628 \u0645\u06CC\u06BA \u062A\u0628\u0644\u06CC\u063A \u06A9\u06D2 \u0644\u06CC\u06D2 \u062A\u0644\u0627\u0634 \u06A9\u0631\u06CC\u06BA",
+    searchPlaceholder: "\u06A9\u0648\u0626\u06CC \u0628\u06BE\u06CC \u0627\u0633\u0644\u0627\u0645\u06CC \u06CC\u0627 \u062A\u0628\u0644\u06CC\u063A\u06CC \u0633\u0648\u0627\u0644 \u067E\u0648\u0686\u06BE\u06CC\u06BA...",
+    searchBtn: "\u062A\u0644\u0627\u0634 \u06A9\u0631\u06CC\u06BA",
+    downloadPdf: "\uD83D\uDCE5 PDF",
+    suggestedTitle: "\u0645\u0642\u0628\u0648\u0644 \u062A\u0628\u0644\u06CC\u063A\u06CC \u0645\u0648\u0636\u0648\u0639\u0627\u062A",
+    resultsTitle: "\u062A\u0644\u0627\u0634 \u06A9\u06D2 \u0646\u062A\u0627\u0626\u062C",
+    clearResults: "\u0635\u0627\u0641 \u06A9\u0631\u06CC\u06BA",
+    quranSection: "\u0642\u0631\u0622\u0646 \u06A9\u06CC \u0622\u06CC\u0627\u062A",
+    hadithSection: "\u0627\u062D\u0627\u062F\u06CC\u062B \u06A9\u06D2 \u0646\u062A\u0627\u0626\u062C",
+    ahmadiyyaSection: "\u0627\u062D\u0645\u062F\u06CC \u0627\u062F\u0628",
+    footerText: "\u0627\u0633\u0644\u0627\u0645\u06A9 \u067E\u0627\u06A9\u0679 \u0628\u06A9 \u2014 \u0627\u062D\u0645\u062F\u06CC \u0645\u0628\u0644\u063A\u06CC\u0646 \u06A9\u06D2 \u0644\u06CC\u06D2",
+    noResults: "\u06A9\u0648\u0626\u06CC \u0645\u0645\u0627\u062B\u0644 \u0646\u062A\u06CC\u062C\u06C1 \u0646\u06C1\u06CC\u06BA \u0645\u0644\u0627\u06D4",
+    loading: "\u0644\u0648\u0688 \u06C1\u0648 \u0631\u06C1\u0627 \u06C1\u06D2...",
+    page: "\u0635\u0641\u062D\u06C1",
+    viewInPdf: "\u067E\u0627\u06A9\u0679 \u0628\u06A9 \u0645\u06CC\u06BA \u06A9\u06BE\u0648\u0644\u06CC\u06BA \u2190"
   }
 };
 
@@ -48,50 +48,55 @@ let currentTheme = localStorage.getItem('ipb-theme') || 'light';
 const PDF_URL = "https://drive.google.com/file/d/1PohF361-ZYMVGKeQYGUpI_tbaPNpOU88/view?usp=drive_link";
 // ==================================================================
 
+// Expanded Pocket Book Index (based on common Tablighi topics)
 const pocketBookIndex = [
-  { title: "وجود باری تعالیٰ کے دلائل / Proofs of Existence of God", page: 1, keywords: ["god", "existence", "وجود", "خدا", "باری"] },
-  { title: "دہریوں کے اعتراضات / Atheists' Objections", page: 20, keywords: ["atheist", "دهری", "منکرین"] },
-  { title: "اسلام اور ویدک دھرم / Islam & Vedic Religion", page: 23, keywords: ["vedic", "ویدک", "آرین", "hindu"] },
-  { title: "عیسائیت / Christianity", page: 71, keywords: ["christianity", "عیسائیت", "عیسائی", "jesus"] },
-  { title: "تردید الوہیت مسیح / Refutation of Divinity of Jesus", page: 74, keywords: ["divinity", "الوہیت", "trinity", "تثلیث"] },
-  { title: "مسیح صلیب پر فوت نہیں ہوئے / Jesus did not die on Cross", page: 83, keywords: ["cross", "صلیب", "صلب", "crucifixion"] },
-  { title: "کفارہ کی تردید / Refutation of Atonement", page: 92, keywords: ["atonement", "کفارہ"] },
-  { title: "ابطال تثلیث / Refutation of Trinity", page: 100, keywords: ["trinity", "تثلیث"] },
-  { title: "تحریف بائبل / Corruption of the Bible", page: 101, keywords: ["bible", "بائبل", "تحریف"] },
-  { title: "صداقت مسیح موعود از بائبل / Promised Messiah from Bible", page: 111, keywords: ["promised messiah", "مسیح موعود", "bible"] },
-  { title: "عیسائیوں کے اعتراضات / Christian Objections", page: 116, keywords: ["objections", "اعتراضات"] },
-  { title: "سکھ مذہب / Sikh Religion", page: 155, keywords: ["sikh", "سکھ", "nanak"] },
-  { title: "بابی / بہائی مذہب / Babi Bahai", page: 175, keywords: ["bahai", "بابی", "bahaullah"] },
-  { title: "شیعہ مذہب / Shia Religion", page: 187, keywords: ["shia", "شیعہ"] },
-  { title: "وفات مسیح ناصری / Death of Jesus", page: 233, keywords: ["death of jesus", "وفات مسیح", "توفی", "رفع", "ascension"] },
-  { title: "مسئلہ امکان نبوت / Possibility of Prophethood", page: 317, keywords: ["prophethood", "نبوت", "امکان نبوت"] },
-  { title: "تردید انقطاع نبوت / Khatam an-Nabiyyin", page: 357, keywords: ["khatam", "خاتم", "خاتم النبیین", "finality", "seal of prophets"] },
-  { title: "صداقت حضرت مسیح موعود / Truth of Promised Messiah", page: 420, keywords: ["promised messiah", "مسیح موعود", "صداقت"] },
-  { title: "الہامات پر اعتراضات / Objections on Revelations", page: 490, keywords: ["revelation", "الہام", "ilham"] },
-  { title: "پیشگوئیوں پر اعتراضات / Objections on Prophecies", page: 561, keywords: ["prophecy", "پیشگوئی"] }
+  { title: "\u0648\u062C\u0648\u062F \u0628\u0627\u0631\u06CC \u062A\u0639\u0627\u0644\u06CC\u0670 \u06A9\u06D2 \u062F\u0644\u0627\u0626\u0644 / Proofs of Existence of God", page: 1, keywords: ["god", "existence", "\u0648\u062C\u0648\u062F", "\u062E\u062F\u0627", "\u0628\u0627\u0631\u06CC", "proof", "dalil"] },
+  { title: "\u062F\u06C1\u0631\u06CC\u0648\u06BA \u06A9\u06D2 \u0627\u0639\u062A\u0631\u0627\u0636\u0627\u062A / Atheists' Objections", page: 20, keywords: ["atheist", "\u062F\u06C1\u0631\u06CC", "\u0645\u0646\u06A9\u0631\u06CC\u0646", "atheism"] },
+  { title: "\u0627\u0633\u0644\u0627\u0645 \u0627\u0648\u0631 \u0648\u06CC\u062F\u06A9 \u062F\u06BE\u0631\u0645 / Islam & Vedic Religion", page: 23, keywords: ["vedic", "\u0648\u06CC\u062F\u06A9", "\u0622\u0631\u06CC\u0646", "hindu", "hinduism"] },
+  { title: "\u0639\u06CC\u0633\u0627\u0626\u06CC\u062A / Christianity", page: 71, keywords: ["christianity", "\u0639\u06CC\u0633\u0627\u0626\u06CC\u062A", "\u0639\u06CC\u0633\u0627\u0626\u06CC", "jesus", "christian"] },
+  { title: "\u062A\u0631\u062F\u06CC\u062F \u0627\u0644\u0648\u06C1\u06CC\u062A \u0645\u0633\u06CC\u062D / Refutation of Divinity of Jesus", page: 74, keywords: ["divinity", "\u0627\u0644\u0648\u06C1\u06CC\u062A", "trinity", "\u062A\u062B\u0644\u06CC\u062B", "son of god"] },
+  { title: "\u0645\u0633\u06CC\u062D \u0635\u0644\u06CC\u0628 \u067E\u0631 \u0641\u0648\u062A \u0646\u06C1\u06CC\u06BA \u06C1\u0648\u0626\u06D2 / Jesus did not die on Cross", page: 83, keywords: ["cross", "\u0635\u0644\u06CC\u0628", "\u0635\u0644\u0628", "crucifixion", "died on cross"] },
+  { title: "\u06A9\u0641\u0627\u0631\u06C1 \u06A9\u06CC \u062A\u0631\u062F\u06CC\u062F / Refutation of Atonement", page: 92, keywords: ["atonement", "\u06A9\u0641\u0627\u0631\u06C1", "ransom", "sacrifice"] },
+  { title: "\u0627\u0628\u0637\u0627\u0644 \u062A\u062B\u0644\u06CC\u062B / Refutation of Trinity", page: 100, keywords: ["trinity", "\u062A\u062B\u0644\u06CC\u062B", "three gods"] },
+  { title: "\u062A\u062D\u0631\u06CC\u0641 \u0628\u0627\u0626\u0628\u0644 / Corruption of the Bible", page: 101, keywords: ["bible", "\u0628\u0627\u0626\u0628\u0644", "\u062A\u062D\u0631\u06CC\u0641", "corruption", "tahrif"] },
+  { title: "\u0635\u062F\u0627\u0642\u062A \u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F \u0627\u0632 \u0628\u0627\u0626\u0628\u0644 / Promised Messiah from Bible", page: 111, keywords: ["promised messiah", "\u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F", "bible", "second coming"] },
+  { title: "\u0639\u06CC\u0633\u0627\u0626\u06CC\u0648\u06BA \u06A9\u06D2 \u0627\u0639\u062A\u0631\u0627\u0636\u0627\u062A / Christian Objections", page: 116, keywords: ["objections", "\u0627\u0639\u062A\u0631\u0627\u0636\u0627\u062A", "christian"] },
+  { title: "\u0633\u06A9\u06BE \u0645\u0630\u06C1\u0628 / Sikh Religion", page: 155, keywords: ["sikh", "\u0633\u06A9\u06BE", "nanak", "sikhism"] },
+  { title: "\u0628\u0627\u0628\u06CC / \u0628\u06C1\u0627\u0626\u06CC \u0645\u0630\u06C1\u0628 / Babi Bahai", page: 175, keywords: ["bahai", "\u0628\u0627\u0628\u06CC", "bahaullah", "bahai"] },
+  { title: "\u0634\u06CC\u0639\u06C1 \u0645\u0630\u06C1\u0628 / Shia Religion", page: 187, keywords: ["shia", "\u0634\u06CC\u0639\u06C1", "shiite"] },
+  { title: "\u0648\u0641\u0627\u062A \u0645\u0633\u06CC\u062D \u0646\u0627\u0635\u0631\u06CC / Death of Jesus", page: 233, keywords: ["death of jesus", "\u0648\u0641\u0627\u062A \u0645\u0633\u06CC\u062D", "\u062A\u0648\u0641\u06CC", "\u0631\u0641\u0639", "ascension", "isa", "jesus died", "tawaffa"] },
+  { title: "\u0645\u0633\u0626\u0644\u06C1 \u0627\u0645\u06A9\u0627\u0646 \u0646\u0628\u0648\u062A / Possibility of Prophethood", page: 317, keywords: ["prophethood", "\u0646\u0628\u0648\u062A", "\u0627\u0645\u06A9\u0627\u0646 \u0646\u0628\u0648\u062A", "possibility of prophet"] },
+  { title: "\u062A\u0631\u062F\u06CC\u062F \u0627\u0646\u0642\u0637\u0627\u0639 \u0646\u0628\u0648\u062A / Khatam an-Nabiyyin (Finality)", page: 357, keywords: ["khatam", "\u062E\u0627\u062A\u0645", "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646", "finality", "seal of prophets", "last prophet", "khatame nabuwwat", "\u062E\u062A\u0645 \u0646\u0628\u0648\u062A"] },
+  { title: "\u0635\u062F\u0627\u0642\u062A \u062D\u0636\u0631\u062A \u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F / Truth of Promised Messiah", page: 420, keywords: ["promised messiah", "\u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F", "\u0635\u062F\u0627\u0642\u062A", "mirza ghulam ahmad", "qadian"] },
+  { title: "\u0627\u0644\u06C1\u0627\u0645\u0627\u062A \u067E\u0631 \u0627\u0639\u062A\u0631\u0627\u0636\u0627\u062A / Objections on Revelations", page: 490, keywords: ["revelation", "\u0627\u0644\u06C1\u0627\u0645", "ilham", "wahi"] },
+  { title: "\u067E\u06CC\u0634\u06AF\u0648\u0626\u06CC\u0648\u06BA \u067E\u0631 \u0627\u0639\u062A\u0631\u0627\u0636\u0627\u062A / Objections on Prophecies", page: 561, keywords: ["prophecy", "\u067E\u06CC\u0634\u06AF\u0648\u0626\u06CC", "predictions"] },
+  { title: "\u062C\u06C1\u0627\u062F \u06A9\u06CC \u062D\u0642\u06CC\u0642\u062A / Reality of Jihad", page: 600, keywords: ["jihad", "\u062C\u06C1\u0627\u062F", "holy war", "qital"] },
+  { title: "\u062E\u0644\u0627\u0641\u062A \u0627\u062D\u0645\u062F\u06CC\u06C1 / Ahmadiyya Khilafat", page: 650, keywords: ["khilafat", "\u062E\u0644\u0627\u0641\u062A", "caliphate", "khalifa"] }
 ];
 
 const popularTopics = {
-  en: ["Death of Jesus", "Khatam an-Nabiyyin", "Promised Messiah", "Trinity", "Atonement", "Existence of God", "Bible corruption", "Second Coming", "Sikhism", "Shia beliefs"],
-  ur: ["وفات مسیح", "خاتم النبیین", "مسیح موعود", "تثلیث", "کفارہ", "وجود باری تعالیٰ", "تحریف بائبل", "نزول ثانی", "سکھ مذہب", "شیعہ عقائد"]
+  en: ["Death of Jesus", "Khatam an-Nabiyyin", "Promised Messiah", "Trinity", "Atonement", "Existence of God", "Bible corruption", "Second Coming", "Jihad", "Khilafat"],
+  ur: ["\u0648\u0641\u0627\u062A \u0645\u0633\u06CC\u062D", "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646", "\u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F", "\u062A\u062B\u0644\u06CC\u062B", "\u06A9\u0641\u0627\u0631\u06C1", "\u0648\u062C\u0648\u062F \u0628\u0627\u0631\u06CC \u062A\u0639\u0627\u0644\u06CC\u0670", "\u062A\u062D\u0631\u06CC\u0641 \u0628\u0627\u0626\u0628\u0644", "\u0646\u0632\u0648\u0644 \u062B\u0627\u0646\u06CC", "\u062C\u06C1\u0627\u062F", "\u062E\u0644\u0627\u0641\u062A"]
 };
 
 // Better keyword mapping for Quran search
 const quranKeywordMap = {
   "khatam": "seal of the prophets",
   "khatam an-nabiyyin": "seal of the prophets",
-  "خاتم": "خاتم النبیین",
-  "خاتم النبیین": "خاتم النبیین",
-  "death of jesus": "Jesus died",
-  "وفات مسیح": "عیسیٰ",
+  "\u062E\u0627\u062A\u0645": "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646",
+  "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646": "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646",
+  "death of jesus": "Jesus",
+  "\u0648\u0641\u0627\u062A \u0645\u0633\u06CC\u062D": "\u0639\u06CC\u0633\u06CC\u0670",
   "trinity": "three",
-  "تثلیث": "ثلاثة",
+  "\u062A\u062B\u0644\u06CC\u062B": "\u062B\u0644\u0627\u062B\u0629",
   "atonement": "ransom",
-  "کفارہ": "فدية",
+  "\u06A9\u0641\u0627\u0631\u06C1": "\u0641\u062F\u06CC\u0629",
   "promised messiah": "messiah",
-  "مسیح موعود": "مسیح",
+  "\u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F": "\u0645\u0633\u06CC\u062D",
   "existence of god": "God",
-  "وجود": "الله"
+  "\u0648\u062C\u0648\u062F": "\u0627\u0644\u0644\u0647",
+  "jihad": "strive",
+  "\u062C\u06C1\u0627\u062F": "\u062C\u06C1\u0627\u062F"
 };
 
 function normalizeQuery(q) {
@@ -118,13 +123,13 @@ function applyLanguage() {
     const key = el.getAttribute('data-i18n-placeholder');
     if (translations[currentLang][key]) el.placeholder = translations[currentLang][key];
   });
-  document.getElementById('langLabel').textContent = currentLang === 'en' ? 'اردو' : 'English';
+  document.getElementById('langLabel').textContent = currentLang === 'en' ? '\u0627\u0631\u062F\u0648' : 'English';
   renderTopics();
 }
 
 function applyTheme() {
   document.documentElement.setAttribute('data-theme', currentTheme);
-  document.getElementById('themeIcon').textContent = currentTheme === 'light' ? '🌙' : '☀️';
+  document.getElementById('themeIcon').textContent = currentTheme === 'light' ? '\uD83C\uDF19' : '\u2600\uFE0F';
 }
 
 function renderTopics() {
@@ -155,7 +160,6 @@ async function searchQuran(query) {
   resultsEl.innerHTML = '';
   
   try {
-    // Improve query using keyword map
     let searchTerm = query;
     const nq = normalizeQuery(query);
     for (const [key, value] of Object.entries(quranKeywordMap)) {
@@ -185,7 +189,6 @@ async function searchQuran(query) {
         resultsEl.appendChild(item);
       });
     } else {
-      // Fallback useful verses for common topics
       const fallbacks = getQuranFallbacks(nq);
       if (fallbacks.length) {
         countEl.textContent = fallbacks.length;
@@ -211,16 +214,23 @@ async function searchQuran(query) {
 }
 
 function getQuranFallbacks(q) {
-  if (q.includes('khatam') || q.includes('خاتم') || q.includes('finality') || q.includes('seal')) {
+  if (q.includes('khatam') || q.includes('\u062E\u0627\u062A\u0645') || q.includes('finality') || q.includes('seal') || q.includes('\u062E\u062A\u0645')) {
     return [
       { ref: "Al-Ahzab 33:40", text: "Muhammad is not the father of any of your men, but he is the Messenger of Allah and the Seal of the Prophets..." },
       { ref: "Al-Maidah 5:3", text: "...This day I have perfected for you your religion and completed My favor upon you..." }
     ];
   }
-  if (q.includes('jesus') || q.includes('عیسی') || q.includes('مسیح') || q.includes('death')) {
+  if (q.includes('jesus') || q.includes('\u0639\u06CC\u0633\u06CC') || q.includes('\u0645\u0633\u06CC\u062D') || q.includes('death') || q.includes('\u0648\u0641\u0627\u062A') || q.includes('tawaffa')) {
     return [
-      { ref: "Al-Imran 3:55", text: "O Jesus, indeed I will take you and raise you to Myself..." },
-      { ref: "An-Nisa 4:157", text: "...they did not kill him, nor did they crucify him; but it was made to appear so to them..." }
+      { ref: "Al-Imran 3:55", text: "O Jesus, indeed I will take you and raise you to Myself and purify you from those who disbelieve..." },
+      { ref: "An-Nisa 4:157-158", text: "...they did not kill him, nor did they crucify him; but it was made to appear so to them... Rather, Allah raised him to Himself." },
+      { ref: "Al-Maidah 5:117", text: "I said nothing to them except that which You commanded me... and when You took me, You were the Watcher over them..." }
+    ];
+  }
+  if (q.includes('jihad') || q.includes('\u062C\u06C1\u0627\u062F')) {
+    return [
+      { ref: "Al-Hajj 22:39", text: "Permission to fight is given to those against whom war is made, because they have been wronged..." },
+      { ref: "Al-Baqarah 2:190", text: "And fight in the way of Allah those who fight you, but do not transgress..." }
     ];
   }
   return [];
@@ -238,29 +248,34 @@ async function searchHadith(query) {
   
   const hadithDatabase = [
     {
-      keywords: ["khatam", "خاتم", "finality", "seal", "last prophet", "خاتم النبیین"],
+      keywords: ["khatam", "\u062E\u0627\u062A\u0645", "finality", "seal", "last prophet", "\u062E\u0627\u062A\u0645 \u0627\u0644\u0646\u0628\u06CC\u06CC\u0646", "\u062E\u062A\u0645 \u0646\u0628\u0648\u062A"],
       ref: "Sahih Muslim / Bukhari",
       text: "I am the last of the Prophets, there is no Prophet after me. (Ana Khatamun-Nabiyyin)"
     },
     {
-      keywords: ["jesus", "عیسی", "مسیح", "descent", "نزول", "second coming"],
+      keywords: ["jesus", "\u0639\u06CC\u0633\u06CC", "\u0645\u0633\u06CC\u062D", "descent", "\u0646\u0632\u0648\u0644", "second coming", "\u0648\u0641\u0627\u062A"],
       ref: "Sahih Bukhari & Muslim",
-      text: "By Him in Whose Hands my soul is, the son of Mary (Jesus) will shortly descend amongst you as a just ruler..."
+      text: "By Him in Whose Hands my soul is, the son of Mary (Jesus) will shortly descend amongst you as a just ruler... He will break the cross, kill the swine..."
     },
     {
-      keywords: ["intention", "نیت", "actions", "اعمال"],
+      keywords: ["intention", "\u0646\u06CC\u062A", "actions", "\u0627\u0639\u0645\u0627\u0644"],
       ref: "Sahih al-Bukhari 1",
       text: "Actions are according to intentions, and every person will get the reward according to what he has intended."
     },
     {
-      keywords: ["death of jesus", "وفات", "cross", "صلیب"],
+      keywords: ["death of jesus", "\u0648\u0641\u0627\u062A", "cross", "\u0635\u0644\u06CC\u0628", "tawaffa"],
       ref: "Various authentic narrations",
       text: "The Prophet (sa) said that Jesus will die a natural death after his descent, and Muslims will pray over him."
     },
     {
-      keywords: ["prophethood", "نبوت", "messiah", "مسیح موعود"],
+      keywords: ["prophethood", "\u0646\u0628\u0648\u062A", "messiah", "\u0645\u0633\u06CC\u062D \u0645\u0648\u0639\u0648\u062F"],
       ref: "Sahih Muslim",
       text: "There will be no prophet after me, but there will be Khulafa (successors)..."
+    },
+    {
+      keywords: ["jihad", "\u062C\u06C1\u0627\u062F"],
+      ref: "Sahih Bukhari & Muslim",
+      text: "The best Jihad is to speak a word of truth before a tyrannical ruler."
     }
   ];
   
@@ -282,7 +297,7 @@ async function searchHadith(query) {
     });
   } else {
     countEl.textContent = '0';
-    resultsEl.innerHTML = `<div class="no-results">${translations[currentLang].noResults}<br><small>Try specific terms like "Khatam", "Jesus descent", "intention"</small></div>`;
+    resultsEl.innerHTML = `<div class="no-results">${translations[currentLang].noResults}<br><small>Try specific terms like "Khatam", "Death of Jesus", "Jihad"</small></div>`;
   }
 }
 
