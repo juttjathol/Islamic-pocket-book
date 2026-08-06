@@ -305,7 +305,7 @@ function searchAhmadiyya(query) {
     item.innerHTML = `
       <div class="result-ref">${m.title}</div>
       <div class="result-meta">${translations[currentLang].page}: ${m.page}</div>
-      <a href="Pocket-Book.pdf#page=${m.page}" target="_blank" class="pdf-btn" style="margin-top:8px;display:inline-flex;">
+      <a href="https://pub-567c7c5052e949a6abbe9b575a0b08b0.r2.dev/pocketbook#page=${m.page}" target="_blank" class="pdf-btn" style="margin-top:8px;display:inline-flex;">
         ${translations[currentLang].viewInPdf}
       </a>
     `;
