@@ -49,7 +49,6 @@ body {
   transition: padding 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Soft bottom edges */
 .header::after {
   content: '';
   position: absolute;
@@ -68,11 +67,10 @@ body {
   background-image: url('images/ahmadiyya-flag.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.35; /* starts softer */
+  opacity: 0.35;
   transition: opacity 0.45s ease;
 }
 
-/* When scrolled - flag becomes fully visible */
 .header.scrolled .header-bg {
   opacity: 0.9;
 }
@@ -138,7 +136,7 @@ body {
   border-color: rgba(255,255,255,0.6);
 }
 
-/* ========== HERO - Soft Professional Eclipse ========== */
+/* ========== HERO - Soft fade on TOP and BOTTOM ========== */
 .hero {
   position: relative;
   padding: 80px 0 60px;
@@ -182,15 +180,29 @@ body {
   );
 }
 
+/* Soft fade on TOP of hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Soft fade on BOTTOM of hero */
 .hero::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 90px;
   background: linear-gradient(to bottom, transparent, var(--bg));
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
 }
 
