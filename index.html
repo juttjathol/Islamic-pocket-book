@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Islamic Pocket Book - Reference search tool for Ahmadiyya preachers. Search Quran, Hadith and Ahmadiyya literature.">
+  <meta name="description" content="Islamic Pocket Book - Professional reference search for Ahmadiyya preachers">
   <title>Islamic Pocket Book</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,111 +20,79 @@
           <h1 data-i18n="siteTitle">Islamic Pocket Book</h1>
         </div>
         <div class="header-controls">
-          <button id="langToggle" class="control-btn" title="Switch Language">
-            <span id="langLabel">اردو</span>
-          </button>
-          <button id="themeToggle" class="control-btn" title="Toggle Dark Mode">
-            <span id="themeIcon">🌙</span>
-          </button>
+          <a id="pdfDownloadBtn" href="#" target="_blank" class="pdf-btn-header" data-i18n="downloadPdf">📥 PDF</a>
+          <button id="langToggle" class="control-btn"><span id="langLabel">اردو</span></button>
+          <button id="themeToggle" class="control-btn"><span id="themeIcon">🌙</span></button>
         </div>
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main">
-      <!-- Hero / Search Section -->
+      <!-- Hero -->
       <section class="hero">
-        <div class="hero-content">
-          <h2 class="hero-title" data-i18n="heroTitle">Find References Instantly</h2>
-          <p class="hero-subtitle" data-i18n="heroSubtitle">Search Quran, Hadith and Ahmadiyya literature for Tabligh and study</p>
-          
-          <div class="search-box">
-            <input 
-              type="text" 
-              id="searchInput" 
-              data-i18n-placeholder="searchPlaceholder"
-              placeholder="Ask any Islamic or Tabligh related question..."
-              autocomplete="off"
-            >
-            <button id="searchBtn" class="search-btn" data-i18n="searchBtn">Search</button>
-          </div>
-
-          <div class="quick-actions">
-           <a href="https://pub-567c7c5052e949a6abbe9b575a0b08b0.r2.dev/pocketbook" target="_blank" class="pdf-btn" data-i18n="downloadPdf">
-              📥 Download Pocket Book PDF
-            </a>
-          </div>
+        <h2 class="hero-title" data-i18n="heroTitle">Find References Instantly</h2>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Search Quran, Hadith and Ahmadiyya literature for Tabligh</p>
+        
+        <div class="search-box">
+          <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Ask any Islamic or Tabligh related question..." autocomplete="off">
+          <button id="searchBtn" class="search-btn" data-i18n="searchBtn">Search</button>
         </div>
       </section>
 
       <!-- Suggested Topics -->
       <section class="suggestions" id="suggestionsSection">
         <h3 data-i18n="suggestedTitle">Popular Tabligh Topics</h3>
-        <div class="topic-grid" id="topicGrid">
-          <!-- Filled by JS -->
-        </div>
+        <div class="topic-grid" id="topicGrid"></div>
       </section>
 
-      <!-- Results Section -->
+      <!-- Results -->
       <section class="results" id="resultsSection" style="display: none;">
         <div class="results-header">
           <h3 data-i18n="resultsTitle">Search Results</h3>
           <button id="clearResults" class="text-btn" data-i18n="clearResults">Clear</button>
         </div>
 
-        <!-- Quran Section -->
-        <div class="result-card" id="quranCard">
-          <div class="card-header" onclick="toggleSection('quran')">
-            <h4>
-              <span class="section-icon">🕌</span>
-              <span data-i18n="quranSection">Quran Verses</span>
-              <span class="count" id="quranCount">0</span>
-            </h4>
-            <span class="toggle-icon">▼</span>
+        <div class="results-grid">
+          <!-- Quran -->
+          <div class="result-card" id="quranCard">
+            <div class="card-header" onclick="toggleSection('quran')">
+              <h4><span class="section-icon">🕌</span> <span data-i18n="quranSection">Quran Verses</span> <span class="count" id="quranCount">0</span></h4>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <div class="card-body" id="quranBody">
+              <div class="loading" id="quranLoading">Loading...</div>
+              <div class="results-list" id="quranResults"></div>
+            </div>
           </div>
-          <div class="card-body" id="quranBody">
-            <div class="loading" id="quranLoading">Loading...</div>
-            <div class="results-list" id="quranResults"></div>
-          </div>
-        </div>
 
-        <!-- Hadith Section -->
-        <div class="result-card" id="hadithCard">
-          <div class="card-header" onclick="toggleSection('hadith')">
-            <h4>
-              <span class="section-icon">📜</span>
-              <span data-i18n="hadithSection">Hadith Results</span>
-              <span class="count" id="hadithCount">0</span>
-            </h4>
-            <span class="toggle-icon">▼</span>
+          <!-- Hadith -->
+          <div class="result-card" id="hadithCard">
+            <div class="card-header" onclick="toggleSection('hadith')">
+              <h4><span class="section-icon">📜</span> <span data-i18n="hadithSection">Hadith Results</span> <span class="count" id="hadithCount">0</span></h4>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <div class="card-body" id="hadithBody">
+              <div class="loading" id="hadithLoading">Loading...</div>
+              <div class="results-list" id="hadithResults"></div>
+            </div>
           </div>
-          <div class="card-body" id="hadithBody">
-            <div class="loading" id="hadithLoading">Loading...</div>
-            <div class="results-list" id="hadithResults"></div>
-          </div>
-        </div>
 
-        <!-- Ahmadiyya Literature Section -->
-        <div class="result-card" id="ahmadiyyaCard">
-          <div class="card-header" onclick="toggleSection('ahmadiyya')">
-            <h4>
-              <span class="section-icon">📚</span>
-              <span data-i18n="ahmadiyyaSection">Ahmadiyya Literature (Pocket Book)</span>
-              <span class="count" id="ahmadiyyaCount">0</span>
-            </h4>
-            <span class="toggle-icon">▼</span>
-          </div>
-          <div class="card-body" id="ahmadiyyaBody">
-            <div class="results-list" id="ahmadiyyaResults"></div>
+          <!-- Ahmadiyya -->
+          <div class="result-card" id="ahmadiyyaCard">
+            <div class="card-header" onclick="toggleSection('ahmadiyya')">
+              <h4><span class="section-icon">📚</span> <span data-i18n="ahmadiyyaSection">Ahmadiyya Literature</span> <span class="count" id="ahmadiyyaCount">0</span></h4>
+              <span class="toggle-icon">▼</span>
+            </div>
+            <div class="card-body" id="ahmadiyyaBody">
+              <div class="results-list" id="ahmadiyyaResults"></div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-      <p data-i18n="footerText">Islamic Pocket Book — Built for Ahmadiyya preachers and students of religion</p>
-      <p class="small">References from Quran, authentic Hadith collections and the famous Pocket Book by Malik Abdur Rahman</p>
+      <p data-i18n="footerText">Islamic Pocket Book — Built for Ahmadiyya preachers</p>
     </footer>
   </div>
 
