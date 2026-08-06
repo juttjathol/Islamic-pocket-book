@@ -14,7 +14,7 @@ const translations = {
     quranSection: "Quran Verses",
     hadithSection: "Hadith Results",
     ahmadiyyaSection: "Ahmadiyya Literature",
-    footerText: "Islamic Pocket Book — Built for Ahmadiyya preachers",
+    footerText: "Islamic Pocket Book — Made by Masroor Amjad",
     noResults: "No matching results found.",
     loading: "Loading...",
     page: "Page",
