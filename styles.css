@@ -39,13 +39,27 @@ body {
 
 .app { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
 
-/* ========== TOP HEADER - Ahmadiyya Flag ========== */
+/* ========== TOP HEADER - Soft Edges + Scroll Visibility ========== */
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
   padding: 16px 0;
   overflow: hidden;
+  transition: padding 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Soft bottom edges */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  z-index: 3;
+  pointer-events: none;
 }
 
 .header-bg {
@@ -54,13 +68,24 @@ body {
   background-image: url('images/ahmadiyya-flag.webp');
   background-size: cover;
   background-position: center;
-  opacity: 0.85;
+  opacity: 0.35; /* starts softer */
+  transition: opacity 0.45s ease;
+}
+
+/* When scrolled - flag becomes fully visible */
+.header.scrolled .header-bg {
+  opacity: 0.9;
 }
 
 .header-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+  transition: background 0.45s ease;
+}
+
+.header.scrolled .header-overlay {
+  background: linear-gradient(90deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
 }
 
 .header-inner {
@@ -147,9 +172,6 @@ body {
     rgba(8, 18, 28, 0.4) 40%,
     rgba(247, 246, 242, 0.88) 100%
   );
-  /* Soft edge blending */
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 [data-theme="dark"] .hero-overlay {
   background: linear-gradient(
@@ -160,7 +182,6 @@ body {
   );
 }
 
-/* Soft fade at bottom of hero */
 .hero::after {
   content: '';
   position: absolute;
@@ -451,7 +472,7 @@ body {
   transform: translateY(0);
 }
 .portrait.animate-on-scroll {
-  transform: translateY(-50%) translateX(0);
+  transform: translateY(-50%);
 }
 .portrait.animate-on-scroll.visible {
   opacity: 1;

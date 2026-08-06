@@ -391,6 +391,18 @@ function initScrollAnimations() {
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 }
 
+// Header scroll effect - flag becomes fully visible when scrolling
+function initHeaderScroll() {
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const pdfBtn = document.getElementById('pdfDownloadBtn');
   if (pdfBtn) pdfBtn.href = PDF_URL;
@@ -399,8 +411,8 @@ document.addEventListener('DOMContentLoaded', () => {
   applyTheme();
   renderTopics();
   initScrollAnimations();
+  initHeaderScroll();
 
-  // Force animation on load
   setTimeout(() => {
     document.querySelectorAll('.hero .animate-on-scroll').forEach(el => el.classList.add('visible'));
   }, 80);
