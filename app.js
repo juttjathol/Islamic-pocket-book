@@ -171,10 +171,21 @@ async function searchQuran(query) {
     loadingEl.style.display = 'none';
     
     if (data.code === 200 && data.data?.matches?.length > 0) {
-      const matches = data.data.matches.slice(0, 6);
-      countEl.textContent = matches.length;
+      // Deduplicate by surah + ayah number
+      const seen = new Set();
+      const unique = [];
+      for (const m of data.data.matches) {
+        const key = `${m.surah.number}:${m.numberInSurah}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          unique.push(m);
+        }
+        if (unique.length >= 6) break;
+      }
+
+      countEl.textContent = unique.length;
       
-      matches.forEach(m => {
+      unique.forEach(m => {
         const item = document.createElement('div');
         item.className = 'result-item';
         item.innerHTML = `
@@ -349,7 +360,6 @@ async function performSearch() {
   document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Scroll animations
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -364,9 +374,7 @@ function initScrollAnimations() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const pdfBtn = document.getElementById('pdfDownloadBtn');
-  const pdfCard = document.getElementById('pdfCard');
   if (pdfBtn) pdfBtn.href = PDF_URL;
-  if (pdfCard) pdfCard.href = PDF_URL;
 
   applyLanguage();
   applyTheme();
@@ -396,12 +404,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('searchInput').value = '';
   });
 
-  // Subtle parallax on hero background
+  // Parallax on hero background
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBg = document.querySelector('.hero-bg');
     if (heroBg) {
-      heroBg.style.transform = `scale(1.05) translateY(${scrolled * 0.15}px)`;
+      heroBg.style.transform = `scale(1.08) translateY(${scrolled * 0.18}px)`;
     }
   });
 });
